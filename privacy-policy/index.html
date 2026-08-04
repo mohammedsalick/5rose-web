@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 5Rose</title>
+    <style>
+        :root {
+            --primary-bg: #041c34;
+            --accent-yellow: #FFC000;
+            --text-light: #F8F9FA;
+            --text-muted: #A0B0C0;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-yellow);
+        }
+
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--accent-yellow);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        nav a.active {
+            color: var(--accent-yellow);
+        }
+
+        main {
+            flex: 1;
+            padding: 4rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .content-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-card ul {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content-card h2 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
+        }
+
+        footer {
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../logo.jpeg" alt="5Rose Logo">
+            <div class="logo-text"><span>5</span>ROSE</div>
+        </div>
+        <nav>
+            <a href="../">Home</a>
+            <a href="../privacy-policy/" class="active">Privacy Policy</a>
+            <a href="../support/">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: August 2024</p>
+            
+            <p>Welcome to 5Rose General Store. This Privacy Policy outlines how we collect, use, and protect your information when you use our mobile application and website.</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>We may collect personal information such as your name, email address, phone number, and delivery address when you create an account or place an order. We also collect usage data to improve our services.</p>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>Your information is used to process transactions, deliver products, communicate with you regarding your orders, and improve the functionality of the 5Rose app.</p>
+
+            <h2>3. Data Security</h2>
+            <p>We implement industry-standard security measures to ensure your personal data is kept safe. We do not sell your personal information to third parties.</p>
+
+            <h2>4. Changes to This Policy</h2>
+            <p>We reserve the right to modify this privacy policy at any time. We will notify you of any changes by updating the effective date of this policy.</p>
+
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us via our Support page.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 5Rose General Store. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.85rem;">
+            Pernambut, Tamil Nadu, India - 635810 | Phone: +91 7010631802
+        </p>
+    </footer>
+</body>
+</html>

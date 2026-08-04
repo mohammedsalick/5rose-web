@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - 5Rose</title>
+    <style>
+        :root {
+            --primary-bg: #041c34;
+            --accent-yellow: #FFC000;
+            --text-light: #F8F9FA;
+            --text-muted: #A0B0C0;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-yellow);
+        }
+
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 50px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--accent-yellow);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a.active {
+            color: var(--accent-yellow);
+        }
+
+        main {
+            flex: 1;
+            padding: 4rem 5%;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.8s ease-out;
+            text-align: center;
+        }
+
+        .content-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .support-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .support-form label {
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .support-form input,
+        .support-form select,
+        .support-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+
+        .support-form select option {
+            background: var(--primary-bg);
+            color: #fff;
+        }
+
+        .support-form input:focus,
+        .support-form select:focus,
+        .support-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-yellow);
+        }
+
+        .support-form button {
+            background-color: var(--accent-yellow);
+            color: var(--primary-bg);
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .support-form button:hover {
+            background-color: #E6AC00;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../logo.jpeg" alt="5Rose Logo">
+            <div class="logo-text"><span>5</span>ROSE</div>
+        </div>
+        <nav>
+            <a href="../">Home</a>
+            <a href="../privacy-policy/">Privacy Policy</a>
+            <a href="../support/" class="active">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <h1>We're here to help</h1>
+            <p>Need assistance with the 5Rose app or your recent order? Reach out to our support team.</p>
+
+            <form class="support-form" id="supportForm">
+                <div>
+                    <label for="reason">What can we help you with?</label>
+                    <select id="reason" name="Reason" required>
+                        <option value="Account Deletion" selected>Account Deletion</option>
+                        <option value="General Message">General Message</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Message" rows="5" placeholder="How can we help?" required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <script>
+                document.getElementById('supportForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const reason = document.getElementById('reason').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+
+                    const subject = encodeURIComponent("5Rose Support: " + reason);
+                    const body = encodeURIComponent("User Email: " + email + "\n\nMessage:\n" + message);
+
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=5rosegeneralstore@gmail.com&su=${subject}&body=${body}`;
+
+                    // Open Gmail in a new tab
+                    window.open(gmailUrl, '_blank');
+                });
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 5Rose General Store. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.85rem;">
+            Pernambut, Tamil Nadu, India - 635810 | Phone: +91 7010631802
+        </p>
+    </footer>
+</body>
+
+</html>
